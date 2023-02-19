@@ -1,0 +1,25 @@
+#
+# This file specifies parameters for a given performance run.
+# This is a standard Java properties file
+#
+# DO NOT MODIFY THIS, OR OTHER DEFAULT FILES.
+# Copy the file to loose the ".def" tail, and modify it instead.
+#
+
+# stop the load generator after specific impression number has been reached.
+# Specify -1 for endless run.
+impression_goal = -1
+
+# file name that lists all the user agents.
+ua_list = ua.list
+
+# file name that contains J/S function for calculating certain run parameters.
+functions = lgen.js
+
+# miSpot host URL (should not contain mispot app or PE prefixes)
+url = http://na.sb.goldspotmedia.com
+
+# insertion order distribution ID
+i = 1000
+
+# 

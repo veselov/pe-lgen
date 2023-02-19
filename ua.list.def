@@ -1,0 +1,691 @@
+#
+# this file lists user agents that are sent to the server.
+# Each line can start with a hash sign (#), or be empty, and then is ignored
+# otherwise the line should contain an integer value, followed by one or more
+# white spaces, followed by a user agent string. The generator will total up
+# all the numeric values, and allocate the requests proportionally to the
+# specified numbers. So, if you have:
+# 10 iPhone
+# 3 Android
+# 5 iPad
+# Then, out of each 18 requests, 10 will have the 'iPhone' user agent,
+# 3 - 'Android', and 5 - 'iPad'
+#
+# The idea is that you can paste here the results of this query:
+# select sum(1), ua.value from v_impression v, useragent ua
+# where v.useragentid = ua.id group by ua.value
+# having sum(1) > 1;
+# (drop 'having' to include lines with single instance)
+#
+# The default valus is the above query on miSpot 4.1 production DB, as of
+# 10/13/11
+#
+2	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.220 Safari/535.1
+160	Mozilla/5.0 (iPhone Simulator; U; CPU iPhone OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8H7
+449	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8F190
+1,912	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; PG86100 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+37	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Nexus S Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+692	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_8 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E401
+2,127	Mozilla/5.0 (Linux; U; Android 2.2; en-us; ADR6300 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,839	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+118	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; M9300 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1
+4	Mozilla/5.0 (Windows NT 6.0; rv:6.0.2) Gecko/20100101 Firefox/6.0.2
+112	Mozilla/5.0 (Linux; U; Android 1.6; en-us; SonyEricssonX10a Build/R2CA016) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+109	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0_2 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8A400
+391	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; HERO200 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+1,189	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_10 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E600
+443	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8G4
+62	Mozilla/5.0 (Linux; U; Android 2.2; en-us; SGH-T849 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+570	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; ADR6300 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+410	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_4 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8K2
+46	Mozilla/5.0 (Linux; U; Android 1.5; es-us; Motorola_i1 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+85	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Vortex Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+62	Mozilla/5.0 (Linux; U; Android 2.2.1; es-es; VM670 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+305	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Comet Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+62	Mozilla/5.0 (Linux; U; Android 2.2.1; es-es; SGH-T959V Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+86	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_0_2 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8A400
+651	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; DROID BIONIC Build/5.5.1_84_DBN-55) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+167	Mozilla/5.0 (Linux; U; Android 2.2; en-us; LG-MS690 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+249	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Ally Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+62	Mozilla/5.0 (Linux; U; Android 2.1; en-us; Eris Build/ERD79) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+29	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8F191
+87	Mozilla/5.0 (Linux; U; Android 1.6; en-us; T-Mobile G1 Build/DMD64) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+24	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Dell Streak Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 1.6; es-us; Devour Build/DRC92) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+12	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; PC36100 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 3.2; en-us; Transformer TF101 Build/HTJ85B) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.13
+15	Mozilla/5.0 (Linux; U; Android 3.2; en-us; Xoom Build/HTJ85B) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.13
+6	Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1_3 like Mac OS X; es-es) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7E18
+4	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; DROIDX Build/VZW) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+4	Mozilla/5.0 (Linux; U; Android 1.5; en-us; Behold2 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+4	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; MB855 Build/4.5.1A-1_SUN-143) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; HTC Magic Build/EPE54B) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+12	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; LS670 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+16	Mozilla/5.0 (iPad; U; CPU OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8F190
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Milestone X Build/NTEL) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+33	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Safari/533.17.9
+7	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; ADR6300 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-; T-Mobile myTouch 3G Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; Droid Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 1.6; en-us; T-Mobile myTouch 3G Build/DMD64) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; T-Mobile myTouch 3G Slide Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	<null>
+6	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_10 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E600 Safari/533.17.9
+2	Mozilla/5.0 (Linux; U; Android 3.1; es-es; A500 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+8	Mozilla/5.0 (Linux; U; Android 2.2.2; es-mx; LG-P925 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+83	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; LG-MS690 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Nexus S 4G Build/GRJ06D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; Nexus S 4G Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2; en-gb; GT-P1000 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; DROIDX Build/VZW) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_10 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E600
+4	Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; fr-fr) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J3
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-gb; Nexus One Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; ko-kr) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+6	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148a
+10	Mozilla/5.0 (Linux; U; Android 2.3.3; es-mx; LG-P999 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; A70S Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 1.5; en-us; Eris Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; PC36100 Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+16	Mozilla/5.0 (iPad; U; CPU OS 3_2_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B500
+4	Mozilla/5.0 (Linux; U; Android 1.5; en-gb; Motorola_i1 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_5 like Mac OS X; ja-jp) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+43	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; HTC Glacier Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; ar-ae; GT-I9000 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; DROID X2 Build/4.5.1A-DTN-117-15) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; Desire HD Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+11	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8L1 Safari/6533.18.5
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-; PB99400 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+38	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; X500 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 3.1; en-us; ThinkPad Tablet Build/ThinkPadTablet_A310_02) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+4	Mozilla/5.0 (Linux; U; Android 1.6; en-us; calgary Build/DRC92) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; PantechP8000 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+21	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; LG-MS910 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; GT-S5830L Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; es-es) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B118
+3	Mozilla/5.0 (Linux; U; Android 2.3.7; es-us; Nexus S 4G Build/GWK74) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; id) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+6	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8F190 Safari/6533.18.5
+2,854	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+1,816	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Desire HD Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5,077	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+1,491	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SGH-T959V Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+851	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; T-Mobile G2 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+333	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; SPH-M820-BST Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+733	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; T-Mobile myTouch 3G Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+48	Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2
+797	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_6 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E200
+631	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; DROID3 Build/5.5.1_84_D3G-20_TA-9) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,622	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+167	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SCH-R880 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+285	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; MB860 Build/OLYFR_U4_1.8.3) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+706	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148a
+250	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; PC36100 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+310	Mozilla/5.0 (Linux; U; Android 2.2; en-us; PB99400 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+20	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; GT-S5830L Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+167	Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1_2 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7D11
+22	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_2_1 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+13	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; HUAWEI-M860 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; LG-P999 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+173	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; X10a Build/2.1.A.0.492) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+17	Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; A500 Build/HRI66) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+23	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; C771 Build/C771M030) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+162	Mozilla/5.0 (Linux; U; Android 1.5; en-us; HERO200 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+87	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; LG-P506 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-gb) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B117
+70	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Vortex Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+17	Mozilla/5.0 (Linux; U; Android 1.5; es-es; Motorola_i1 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+68	Mozilla/5.0 (Linux; U; Android 2.3.2; en-us; R800x Build/3.0.E.2.89) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; MB612 Build/KRNS-X4-1.1.3) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+15	Mozilla/5.0 (Linux; U; Android 2.3.2; en-us; VTAB1008 Build/GRH78C) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+22	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; PG41200 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (Linux; U; Android 2.2; en-us; MB611 Build/BGN_1.0.23) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+140	Mozilla/5.0 (Linux; U; Android 1.6; en-us; Devour Build/DRC92) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+41	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; MB860 Build/OLYFR_U4_1.2.6) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+14	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; SPH-M910 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+22	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Titanium Build/ESE81) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+8	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Nexus S Build/GTJ61) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+17	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_5 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+3	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_8 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E401 Safari/533.17.9
+9	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; CBW Blaze Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+15	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; GT-I9000 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8G4 Safari/533.17.9
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_5 like Mac OS X; zh-tw) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+23	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; A854 Build/MILER_X1_01.22.2) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+10	Mozilla/5.0 (Linux; U; Android 2.2.1; es-es; SGH-T839 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; zh-tw) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+13	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; MB860 Build/OLYFR_U4_1.5.7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HTC Desire Z Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+20	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Milestone X Build/AWCC) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; HTC Bee Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+9	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; X10a Build/2.1.A.0.435) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; T100 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SAMSUNG-SGH-I897 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 3.2; ko-kr; Transformer TF101 Build/HTJ85B) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+31	Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Safari/530.17
+21	Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A334
+24	Mozilla/5.0 (Linux; U; Android 2.2.2; es-es; VM670 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2; es-us; SCH-I800 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 1.6; es-es; Behold2 Build/DONUT) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-; LG-P509 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Ally Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+6	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_6 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E200
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; GT-P1000 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; zh-tw) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+4	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Droid Build/FRG22D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Wattpad/2.0.0 CFNetwork/485.10.2 Darwin/10.3.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Droid Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; SCH-I100 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Windows NT 6.0; rv:7.0.1) Gecko/20100101 Firefox/7.0.1
+19	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; SCH-R910 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+43	Mozilla/5.0 (Linux; U; Android 3.2.1; en-us; Transformer TF101 Build/HTK75) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+16	Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:7.0.1) Gecko/20100101 Firefox/7.0.1
+34	Mozilla/5.0 (Linux; U; Android 3.2.1; en-us; Xoom Build/HTK75D) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+22	Mozilla/5.0 (Linux; U; Android 2.3.6; en-us; Nexus One Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_10 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8E600 Safari/6533.18.5
+2	Mozilla/5.0 (iPod; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A334
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_4 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8K2
+20	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; Sprint APA9292KT Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2,837	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; Desire HD Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+22	Mozilla/5.0 (iPhone Simulator; U; CPU iPhone OS 4_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C134
+2,428	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Droid Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,239	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SGH-T959 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+290	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Zio Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+84	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J3
+672	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B117
+1,002	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; MB860 Build/4.5.91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+427	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; Nexus S 4G Build/GRJ90) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_3 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7E18 Safari/528.18
+157	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8A293
+126	Mozilla/5.0 (Linux; U; Android 2.2; en-us; DROID2 Build/VZW) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	MMSDK/4.2.2
+320	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; myTouch_4G_Slide Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+172	Mozilla/5.0 (Linux; U; Android 2.2; en-us; ADR6325 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+98	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; LG-LW690 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+478	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8H7
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; GT-S5570 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 3.1; ko-kr; GT-P7510 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+127	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; MB520 Build/3.4.2-125_KOB_FFW-4) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; myTouch_4G_Slide Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+84	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; HTC Aria Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+294	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SCH-I500 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+10	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; MB860 Build/OLYFR_U4_1.8.3) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+24	Mozilla/5.0 (Linux; U; Android 2.2; en-us; T-Mobile G2 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B367
+9	Mozilla/5.0 (Linux; U; Android 2.3.5; es-us; Nexus S 4G Build/GRJ90) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; T-Mobile G2 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2; en-us; GT-P1000N Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+839	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; ADR6350 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+19	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; WX445 Build/VZW) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_0 like Mac OS X; es-es) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8A293
+2	Mozilla/5.0 (Linux; U; Android Eclair; md-us Build/pandigitalopc1/sourceidDL00000009) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+191	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SPH-M900 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; ADR6300 Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+9	Mozilla/5.0 (Linux; U; Android 2.2; en-us; HTC Glacier Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+21	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Milestone XT720 Build/STR_U2_04.1E.1) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; SPH-D700 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Droid Build/FRG01B) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; GT-I9000T Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_3 like Mac OS X; es-es) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7E18
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-ca; PB99400 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+180	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; SCH-M828C Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+14	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; PC36100 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; zh-cn; T-Mobile G2 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; SPH-D710 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; Thunderbolt Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MotoMB511 Build/RUTEM_U3_01.17.10) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; GT-I9000 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; es-us; LG-US670 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_2_1 like Mac OS X; en-gb) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+2	Mozilla/5.0 (device; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B118
+9	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; ADR6325 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-es; HTC Wildfire Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; Vortex Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; SCH-I500 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+22	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1
+6	Mozilla/5.0 (Windows NT 6.1; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0
+37	Mozilla/5.0 (Linux; U; Android 2.1-update1; es-us; HUAWEI-M860 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+8	Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13 FBSMTWB
+4	Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.70 Safari/533.4
+2	Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1
+2	Mozilla/5.0 (Linux; U; Android v1.02_15.14-MC_US@20110514; en-gb; MID Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; SCH-R915 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 1.5; en-us; LG GW620 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; generic Build/Uberoid Froyo) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; VEGAn-TAB-v1.0.0B5.1 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+17	Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:5.0.1) Gecko/20100101 Firefox/5.0.1
+18	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_8 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8E401 Safari/6533.18.5
+4	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16
+832	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HTC Glacier Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+751	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; SCH-I500 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (iPhone; U; CPU OS 4.3.3 like Mac OS X; en) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10 kdfw/2.4.0/5146
+1,007	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Vortex Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+350	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; T-Mobile myTouch 3G Slide Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+57	Mozilla/5.0 (Linux; U; Android 2.2; es-us; PC36100 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,109	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; LG-MS690 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+119	Mozilla/5.0 (Linux; U; Android 1.5; en-us; MB501 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+941	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; HUAWEI-M860 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+217	Mozilla/5.0 (Linux; U; Android 2.2; en-us; LG-US670 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+17	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB511 Build/RUTH_U3_00.28.4) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+239	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8F190
+34	Mozilla/5.0 (iPad; U; CPU OS 4_3_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8G4
+134	Mozilla/5.0 (Linux; U; Android 3.2; en-us; Transformer TF101 Build/HTJ85B) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+400	Mozilla/5.0 (Linux; U; Android 1.5; en-us; Motorola_i1 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+28	Mozilla/5.0 (Linux; U; Android 2.2.2; es-es; LS670 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+71	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_9 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E501
+58	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; DROIDX Build/4.5.1_57_DX5-26) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+37	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; LG-MS690 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_2 like Mac OS X; es-es) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7D11
+217	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; SPH-D710 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-tw; HTC Legend Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+418	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SCH-I510 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+133	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; SCH-I500 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+14	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; A854 Build/MILER_X1_01.22.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+5	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; es-es) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B117
+5	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; SGH-I897 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+32	Mozilla/5.0 (Linux; U; Android 2.2; es-mx; LG-P509 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; fr-fr) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+5	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; GT-I9000 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+32	Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8H7
+6	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8A293 Safari/532.9
+4	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8F190
+11	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; en-gb) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+4	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_1 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8G4
+19	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SPH-D700 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+22	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; MB612 Build/KRNS-X4-1.1.5) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+12	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; Droid Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+34	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB300 Build/ERD79) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+5	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; HTC Wildfire S Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-; LG-MS690 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-gb) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+9	Mozilla/5.0 (Linux; U; Android 2.2.2; es-es; SGH-T589 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; LG-P500 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+9	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SCH-R880 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+5	Mozilla/5.0 (Linux; U; Android 3.2; en-us; Sony Tablet S Build/THMAS11000) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+3	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; MB860 Build/4.5.91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Dell Venue Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Linux; U; Android 2.3.5; es-es; Nexus S 4G Build/GRJ90) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (Linux; U; Android 1.6; en-us; Behold2 Build/DONUT) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+3	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MID7015A Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+3	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Desire HD Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HERO200 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 1.6; es-mx; SonyEricssonX10a Build/R2CA016) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 1.6; es-us; Garminfone Build/DRC79) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; MZ604 Build/H.6.2-21-demo) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+8	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; ADR6330VW Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+10	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.202 Safari/535.1
+12	Mozilla/5.0 (Linux; U; Android 2.3.6; en-us; Nexus S Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; da-dk) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_7 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E303 Safari/533.17.9
+3	Mozilla/5.0 (Linux; U; Android 1.6; en-us; Archos5 Build/Donut) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; en-gb) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; es-es; SGH-T959 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+14	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30
+1,394	Mozilla/5.0 (Linux; U; Android 2.2; en-us; DROID2 GLOBAL Build/S273) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.220 Safari/535.1
+2,019	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; ADR6400L Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,311	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; DROIDX Build/VZW) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+305	Mozilla/5.0 (Linux; U; Android 2.2; en-us; SGH-T959 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+417	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SAMSUNG-SGH-I997 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+212	Mozilla/5.0 (Linux; U; Android 3.1; en-us; GT-P7510 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+50	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; GT-P1010 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+490	Mozilla/5.0 (iPad; U; CPU OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+3	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_4) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.220 Safari/535.1
+606	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Ally Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+294	Mozilla/5.0 (Linux; U; Android 1.5; en-us; MB200 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+48	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Nexus One Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+59	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; SCH-R720 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,183	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; VM670 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+29	Mozilla/5.0 (Linux; U; Android 2.2; es-us; LG-MS690 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+224	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; C771 Build/C771M050) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+139	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8A306
+7	MMSDK/4.2.5
+141	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB525 Build/JORDN_U3_6.36.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+32	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SPH-M910 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+113	Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+21	Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1_1 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7C145
+2	Mozilla/5.0 (Mine; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+8	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+35	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; HUAWEI-M835 Build/HuaweiM835) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.2; es-es; SGH-T499 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+105	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_2 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7D11
+5	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; DROID2 Build/4.5.1_57_DR2-31) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+29	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; Desire HD Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+128	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB508 Build/SAGE_U3_10.23.20) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+90	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; MB611 Build/BGN_1.1.30) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; A101IT Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+21	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; MB855 Build/4.5.1A-1_SUN-154_5) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+9	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; SPH-M920 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+21	Mozilla/5.0 (Linux; U; Android 3.2.1; en-us; Xoom Build/HTK55D) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+7	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; ADR6400L Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A5274d
+36	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; PG86100 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MotoMB511 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+81	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB502 Build/BASIL_U3_03.90.7) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+24	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; SPH-D600 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+20	MMSDK/4.0.7
+7	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Huawei Ascend Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+9	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; LG-LW690 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+9	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; PC36100 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+36	Mozilla/5.0 (Linux; U; Android 1.5; en-us; SPH-M900 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; GT-P1000 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Milestone XT720 Build/STR_U2_01.18.3) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+11	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148a Safari/533.17.9
+5	Mozilla/5.0 (Linux; U; Android 2.2; es-us; Zio Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; MOTWX435KT Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+11	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+3	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB525 Build/JRDNEM_U3_2.59.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+35	Mozilla/5.0 (Linux; U; Android 2.3.3; es-es; LS670 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; DROIDX Build/4.5.1_57_DX5-3) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HTC Desire CDMA Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+439	Mozilla/5.0 (Linux; U; Android 2.3.7; en-us; Nexus S 4G Build/GWK74) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; es-es; SAMSUNG-SGH-I897/I897UCKB1 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+10	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; GT-I9100 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; ja-jp) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+19	Mozilla/5.0 (Linux; U; Android 3.1; en-us; LG-V909 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+24	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; LG-LW690 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; SPH-M910 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; DROID BIONIC Build/5.5.1_84_DBN-55) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 1.5; en-us; T-Mobile G1 Build/CRB43) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.5; en-gb; Nexus S 4G Build/GRJ90) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; DROIDX Build/4.5.1_57_DX5-18) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; PD_Novel Build/PR71_A_BN_W_A_C_08102011) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-gb) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_1 like Mac OS X; he-il) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8G4
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; DROIDX Build/VZW) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Glacier Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; A853 Build/SHLA_U2_03.06.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+29	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; Desire HD Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-; SGH-T959 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+21	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Motorola Electrify Build/4.5.1A_SUN_USC_16.7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; ko-kr) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J3
+8	Mozilla/5.0 (Windows NT 5.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1
+10	Mozilla/5.0 (X11; Linux i686 on x86_64; rv:6.0) Gecko/20100101 Firefox/6.0
+6,010	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+2,795	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SPH-D700 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+10,400	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; PC36100 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,527	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; DROIDX Build/4.5.1_57_DX5-32) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2,853	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+859	Mozilla/5.0 (Linux; U; Android 2.2; en-us; PC36100 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+53	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SAMSUNG-SGH-I897/I897UCJF6 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+766	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; M860 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+929	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; SPH-M920 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,324	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; HTC Glacier Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+844	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; SCH-R720 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+503	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B117
+280	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8G4
+291	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_3 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7E18
+84	Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J3
+172	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8A293
+438	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; M9300 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+394	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B118
+108	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Garminfone Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+352	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SCH-I500 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+23	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+8	Mozilla/5.0 (Linux; U; Android 2.2; en-us; SGH-I987 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; A854 Build/MILER_X1_00.26.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+50	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_2_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B500
+73	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; AS740 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.3.3; en-gb; Desire HD Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; es-es) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B117
+11	Mozilla/5.0 (Linux; U; Android 3.1; en-us; Xoom Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+118	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; A854 Build/MILER_X1_00.26.1) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+12	Mozilla/5.0 (Linux; U; Android 3.2; en-us; A100 Build/HTJ85B) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+70	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; M865 Build/HuaweiM865) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Vision Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+10	Mozilla/5.0 (iPad; U; CPU OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8F191
+17	Mozilla/5.0 (Linux; U; Android 2.2; es-us; ADR6300 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.2; en-us; MID7024 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+20	Mozilla/5.0 (Linux; U; Android 2.3.3; es-es; SGH-T759 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+28	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; LS670 Build/ZVC) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2; es-es; SAMSUNG-SGH-I897 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+34	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; ADR6350 Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+11	Mozilla/5.0 (Linux; U; Android 2.2.1; es-es; SAMSUNG-SGH-I997 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Droid Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; DROID3 Build/5.5.1_84_D3G-20_TA-9) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; Droid Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8H8
+22	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; SPH-M910 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; MB508 Build/3.4.2-159_SAG-17_SecATT) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HTC Vision Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 1.5; es-us; MB501 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+7	Mozilla/5.0 (Linux; U; Android 2.2; en-us; google_sdk Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+20	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-gb; SGH-T959 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+11	Mozilla/5.0 (Linux; U; Android 1.5; es-es; MB200 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+16	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7A341
+3	Mozilla/5.0 (Linux; U; Android 1.5; ar-eg; Motorola_i1 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+4	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; ADR6350 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Desire HD Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 3.2; zh-tw; Transformer TF101 Build/HTJ85B) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+6	Mozilla/5.0 (Linux; U; Android 2.2; en-us; generic Build/Froyo) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; ADR6300 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Louie ; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; GT-S5570L Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+12	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; C5120 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-gb; GT-S5570 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; T959 Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+11	Mozilla/5.0 (Linux; U; Android 2.2; es-us; PG06100 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; MB520 Build/3.4.2-125_KOB_CCI-6) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; VEGAn-TAB Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,802	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; DROIDX Build/4.5.1_57_DX5-35) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; A43 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; Incredible 2 Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Alcatel OT-980A Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+3	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B117 Safari/532.9
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_1 like Mac OS X; en-gb) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8G4
+6	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; XT720 Build/SHOLS_U2_05.26.0) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+13	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Safari/533.17.9
+2	Mozilla/5.0 (Linux; U; Android 2.2; es-es; SGH-T959 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; GT-I5500L Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Glacier Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+18	Mozilla/5.0 (iPhone Simulator; U; CPU iPhone OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8F192
+5	Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1
+3	Mozilla/5.0 (Linux; U; Android 2.1; en-us; DAMAGEDHERO200 Build/ERD79) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+11	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB200 Build/ERD79) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+28	Mozilla/5.0 (Linux; U; Android 2.2; en-us; sdk Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; ADR6400L Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.22) Gecko/20110905 Ubuntu/10.04 (lucid) Firefox/3.6.22
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Milestone Build/SHOLS_U2_02.36.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; el-gr) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+9	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; T-Mobile myTouch 3G Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.2; es-co; LT15a Build/3.0.A.2.184) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Milestone X Build/NTEL) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-gb) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8B117
+6	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; SCH-I510 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; SGH-T959 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 3.2.1; en-us; Xoom Build/HTK75D) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.13
+2	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; HTC Sensation 4G Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Android Build/MASTER) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8H8
+4	Mozilla/5.0 (Linux; U; Android 1.6; en-us; Google Ion Build/DRC83) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+9	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.215 Safari/535.1
+402	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; HUAWEI-M860 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+346	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; DROID PRO Build/3.4.2_80_V2_87) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+1,255	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; LS670 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+35	Mozilla/5.0 (Linux; U; Android 1.6; en-us; Garminfone Build/DRC79) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+503	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Zio Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+404	Mozilla/5.0 (Linux; U; Android 2.2; en-us; SAMSUNG-SGH-I897/I897UCKB1 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+16	Apache-HttpClient/UNAVAILABLE (java 1.4)
+132	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SCH-I100 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1 USCC-I100
+18	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5
+232	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_4 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8K2
+243	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SCH-R910 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+333	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SGH-T839 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+118	Mozilla/5.0 (Linux; U; Android 3.1; en-us; AT100 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+330	Mozilla/5.0 (Linux; U; Android 2.2; en-us; PG06100 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+21	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; HTC Sensation 4G Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+194	Mozilla/5.0 (Linux; U; Android 3.2; en-us; Xoom Build/HTJ85B) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+809	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HTC Sensation 4G Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+308	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8H7
+491	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SAMSUNG-SGH-I897/I897UCJH7 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+27	Mozilla/5.0 (Linux; U; Android 1.6; en-us; Zio Build/DRC92) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+107	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; MB855 Build/4.5.1A-1_SUN-154_MR-1) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+130	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; MB525 Build/3.4.2-107_JDN-9) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+12	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Alcatel OT-981A Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+15	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; HTC Glacier Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+16	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; PC36100 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+37	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Nexus S 4G Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+40	Mozilla/5.0 (iPad; U; CPU OS 4_3_4 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8K2
+25	Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A5313e
+3	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; VS910 4G Build/VS910ZV6) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+70	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; ADR6400L Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+203	Mozilla/5.0 (Linux; U; Android 1.5; en-us; MB300 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+108	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; PB99400 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+102	Mozilla/5.0 (Linux; U; Android 2.1-update1; es-us; M860 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+36	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; HTC Wildfire Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SPH-P100 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+18	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Milestone X Build/RETAIL) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; ko-kr; SAMSUNG-SGH-I997 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_6 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E200 Safari/533.17.9
+36	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; HTC Liberty Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Ideos S7 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+3	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Liquid Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+10	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; DROIDX Build/4.5.1_57_DX5-32) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+13	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; PC36100 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_5 like Mac OS X; ko-kr) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+5	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; SCH-I500 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB520 Build/KOBE_U3_5.35.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (iPad; U; CPU OS_3_2_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B500 Safari/531.21.10
+4	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148 Safari/533.17.9
+4	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC HD2 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+28	Mozilla/5.0 (Linux; U; Android Eclair; md-us Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+3	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; MB855 Build/4.5.1A-1_SUN-154_MR-1) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+15	Mozilla/5.0 (Linux; U; Android 2.2; en-us; DROIDX Build/VZW) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+14	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; Zio Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7A341
+18	Mozilla/5.0 (Linux; U; Android 2.2; es-us; Comet Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; Liberty Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_5 like Mac OS X; en-gb) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+2	Mozilla/5.0 (Linux; U; Android 2.2; es-us; DROID2 GLOBAL Build/S273) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+18	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; SPH-D700 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+9	Mozilla/5.0 (Linux; U; Android 2.2; en-gb; HTC HD2 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Zio Build/ERD79) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+3	Mozilla/5.0 (iPad; U; CPU OS 4_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C134b
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; sv-se) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SPH-M920 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+5	Mozilla/5.0 (Linux; U; Android 3.1; en-us; Transformer TF101 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+7	Mozilla/5.0 (Linux; U; Android 2.2; en-us; SAMSUNG-SGH-I897/I897UCJI6 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.7; en-gb; Nexus S 4G Build/GWK74) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; SCH-I510 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 1.6; en-us; T-Mobile G1 Build/DRC83) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; SCH-I500 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A5302b
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; es-us; SCH-I400 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.3.3; zh-tw; LT15i Build/4.0.A.2.368) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Linux; U; Android 1.5; es-es; MB501 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android AOSP; en-us Build/OPENMASTER) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-us; SPH-P100 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+38	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; SAMSUNG-SGH-I777 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB502 Build/BASTE_U3_02.39.7) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+14	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Ubuntu/10.04 Chromium/12.0.742.112 Chrome/12.0.742.112 Safari/534.30
+20	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; LG-VS700 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+11	Mozilla/5.0 (iPad; U; CPU OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8L1 Safari/6533.18.5
+5	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Milestone X Build/CS) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+9	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; DROID X2 Build/4.5.1A-DTN-150-30) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HTC Sensation Z710e Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-; DROID2 GLOBAL Build/S273) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1_3 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7E18 Safari/528.18
+4	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; DROIDX Build/4.5.1_57_DX5-35) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+37	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5
+505	Mozilla/5.0 (Linux; U; Android 2.2; en-us; SCH-I800 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+467	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; T-Mobile myTouch 3G Slide Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+855	Mozilla/5.0 (Linux; U; Android 2.2; en-us; LG-P509 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+36	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; PG86100 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+673	Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1_3 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7E18
+91	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_7 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E303
+148	Mozilla/5.0 (Linux; U; Android 3.1; en-us; A500 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+152	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; SPH-P100 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+116	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; LG-P505 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+597	Mozilla/5.0 (Linux; U; Android 2.2; en-us; SAMSUNG-SGH-I897 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+74	Mozilla/5.0 (Linux; U; Android 3.1; en-us; SCH-I905 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+18	Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; MS-RTC LM 8; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
+11	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7C144
+28	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; HUAWEI-M860 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+44	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SCH-R915 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+28	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E128
+76	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; PantechP8000 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+155	Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+370	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; MB855 Build/4.5.1A-1_SUN-154_6) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+509	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; DROID3 Build/5.5.1_84_D3G-55) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; ko-kr; LG-MS690 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; U8100 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+5	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HTC HD2 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Linux; U; Android 2.3.1; en-us; I10-50 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; NookColor Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+95	Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+14	Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7C144
+3	Mozilla/5.0 (Linux; U; Android 2.3.2; en-us; HTC HD2 Build/GRH78C) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Desire HD Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+16	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C148 Safari/533.17.9
+15	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; LogicPD Zoom2 Build/ERD79) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; NookColor Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (iPod; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A5313e
+3	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; de-de) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+7	Mozilla/5.0 (Linux; U; Android 2.2; en-us; DROID PRO Build/V2_2.26.2) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+24	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2 Safari/533.17.9
+4	Mozilla/5.0 (Linux; U; Android 2.2; en-us; Droid Build/FRF84B) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+121	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; SCH-I500 Build/ECLAIR) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17 CSOUTH-i500
+5	Mozilla/5.0 (iPad; U; CPU OS 4_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8C134
+3	Mozilla/5.0 (Linux; U; Android 2.2; en-gb; GT-I9000 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+9	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405
+13	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B367
+55	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SCH-I500 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1 CSOUTH-i500
+4	Mozilla/5.0 (Linux; U; Android 1.6; es-us; T-Mobile G1 Build/DMD64) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+4	Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0_1 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7A400
+6	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; U8500 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.2.2; es-mx; LG-P999 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Droid Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; SPH-M580 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; X10i Build/2.0.A.0.504) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; DROID PRO Build/V2_2.26.60) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+14	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; es-es) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1
+4	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; DROID BIONIC Build/5.5.1_84_DBN-91-LaunchKit) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; US740 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+5	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; GT-S5670L Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+11	Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; GT-I9100 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2.2; es-us; Vortex Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (Linux; U; Android 2.2.2; es-mx; LG-P509 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+8	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; PC36100 Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 1.5; en-au; MB501 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+9	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; GT-I9000T Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+7	Mozilla/5.0 (Linux; U; Android 2.3.3; es-us; PG06100 Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.2; en-gb; HTC Desire Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 3.1; en-us; K1 Build/K1_A301_02_02_110725_US) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_10 like Mac OS X; en-gb) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8E600
+5	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8H7 Safari/533.17.9
+3	Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1_1 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Mobile/7C146
+4	Mozilla/5.0 (Linux; U; Android 2.1; es-us; Eris Build/ERD79) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_4 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8K2 Safari/533.17.9
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; CPCEris Build/unknown) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 1.5; es-us; MB300 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+2	Mozilla/5.0 (Linux; U; Android 1.5; en-us; LG GW620g Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+4	Mozilla/5.0 (Linux; U; Android 2.3.4; es-us; MB855 Build/4.5.1A-1_SUN-154_6) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.1; en-us; HTC HD2 Build/GRH78) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+50	Mozilla/5.0 (Linux; U; Android 3.2; en-us; A500 Build/HTJ85B) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+2	Mozilla/5.0 (Linux; U; Android 2.2.1; zh-cn; SAMSUNG-SGH-I997 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; X10a Build/2.0.A.0.504) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+3	Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; DROIDX Build/MIUI) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1
+5	Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.187 Safari/535.1
+38	Mozilla/5.0 (Linux; U; Android 2.2.2; en-us; Milestone X Build/RETAIL) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+4	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; HTC Glacier Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.2.1; es-us; HUAWEI-M860 Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+5	Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.187 Safari/535.1
+4	Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; SCH-I510 4G Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+3	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-; M860 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; HTC; HD7)
+4	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; MB502 Build/BASIL_U3_02.60.5) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17
+2	Mozilla/5.0 (Linux; U; Android 2.3.6; es-us; Nexus One Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; S7 Build/4431) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+6	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; LG-LS855 Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Vision Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+2	Mozilla/5.0 (Linux; U; Android 1.5; en-gb; MB200 Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
